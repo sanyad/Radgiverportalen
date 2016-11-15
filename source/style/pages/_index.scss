@@ -1,7 +1,7 @@
 html, body {
   height: 100%;
   @include mediamax(1199px) {
-    height: auto;
+    //height: auto;
   }
 }
 body {
@@ -11,48 +11,17 @@ body {
   width: 100%;
   background: url("../img/bg.jpg") no-repeat center -100px;
   @include mediamin(1921px) {
-    background-position: center 0;
+    //background-position: center 0;
   }
   @include mediamax(1199px) {
-    background: url(../img/bg.jpg) no-repeat -330px;
-    background-size:cover;
+    //background: url(../img/bg.jpg) no-repeat -330px;
+    //background-size:cover;
   }
   @include mediamax(767px) {
-    height: auto;
-    background: url(../img/bg2.jpg) no-repeat -1000px 0;
+    //height: auto;
+    //background: url(../img/bg2.jpg) no-repeat -1000px 0;
   }
 }
-.header {
-  display: flex;
-  justify-content:center;
-  align-items:center;
-  padding-top: 20px;
-  padding-bottom: 15px;
-  flex: 0 0 auto;
-}
-
-.logo {
-  width: 431px;
-  height: 90px;
-  @include mediamax(991px) {
-    width: 300px;
-  }
-  @include mediamax(767px) {
-    width: 250px;
-  }
-}
-
-.container {
-  padding: 0;
-  display: flex;
-  flex: 1 0 auto;
-  @include mediamax(767px) {
-    flex-direction:column;
-    width: 100%;
-    padding: 0 15px;
-  }
-}
-
 .fb-container {
   margin-left: auto;
   margin-top: 80px;
@@ -77,36 +46,6 @@ body {
   }
   @include mediamin(768px) {
     display: none;
-  }
-}
-.slogan {
-  color: #4e4e5d;
-  margin-top: 440px;
-  position: relative;
-  padding-top: 40px;
-  @include mediamin(1921px) {
-    margin-top:550px
-  }
-  @include mediamax(767px) {
-    margin-top: 50px;
-    order: 1;
-    margin-right: auto;
-  }
-  &:before {
-    width: 100px;
-    height: 3px;
-    background: #ff181f;
-    position: absolute;
-    content: '';
-    top: 0;
-  }
-  .line1 {
-    font:500 35px roboto;
-    margin-bottom: 28px;
-  }
-  .line2 {
-    font:400 25px roboto;
-    font-style: italic;
   }
 }
 .footer {
