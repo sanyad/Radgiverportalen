@@ -1,0 +1,40 @@
+extends ../_template
+
+block content
+    .header
+        img.logo(src="./assets/img/logo.svg" alt="logo")
+    .container
+        .slogan2
+            +use('norge')
+        .slogan
+            .line1 Sprek Norge:
+            .line2 Ny hjemmeside kommer snart
+        .fb-container
+            .fb-page(data-href='https://www.facebook.com/www.spreknorge.no', data-tabs='timeline', data-small-header='false', data-adapt-container-width='true', data-hide-cover='false', data-show-facepile='true', data-width="370")
+                blockquote.fb-xfbml-parse-ignore(cite='https://www.facebook.com/www.spreknorge.no')
+                    a(href='//www.facebook.com/www.spreknorge.no') Sprek Norge
+    .footer
+        +b.UL.social
+            +e.list
+                +e.A(href="//www.facebook.com/www.spreknorge.no" target="_blank").link
+                    +use('fb')
+                    | facebook
+            +e.list
+                +e.A(href="//www.youtube.com/channel/UCIJtfbQlaKcIT0Z7nzAtFOQ" target="_blank").link
+                    +use('yt')
+                    | youtube
+            +e.list
+                +e.A(href="//plus.google.com/110219344770814249409" target="_blank").link
+                    +use('google')
+                    | google+
+        .copy © Sprek Norge 2017
+    #fb-root
+    script.
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/nb_NO/sdk.js#xfbml=1&version=v2.8";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));

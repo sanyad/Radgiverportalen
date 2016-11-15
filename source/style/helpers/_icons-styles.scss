@@ -1,0 +1,27 @@
+.icon {
+  fill: #3e425e;
+  &-fb {
+    width: 15px;
+    height: 28px;
+  }
+  &-yt {
+    width: 25px;
+    height: 29px;
+  }
+  &-google {
+    width: 28px;
+    height: 28px;
+  }
+  &.marker {
+    fill: #b3b3b3;
+    width: 14px;
+    height: 20px;
+    margin-right: 13px;
+  }
+  &.phone-icon {
+    fill: #b3b3b3;
+    width: 22px;
+    height: 22px;
+    margin-right: 15px;
+  }
+}

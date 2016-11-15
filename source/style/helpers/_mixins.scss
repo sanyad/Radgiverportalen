@@ -1,0 +1,55 @@
+
+
+@mixin mediamin($screen) {
+  @media (min-width: $screen) {
+    @content;
+  }
+}
+
+@mixin mediamax($screen) {
+  @media (max-width: $screen) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio : 2),
+  only screen and (min--moz-device-pixel-ratio : 2),
+  only screen and (-o-min-device-pixel-ratio : 2/1),
+  only screen and (min-device-pixel-ratio : 2),
+  only screen and (min-resolution : 192dpi),
+  only screen and (min-resolution : 2dppx) {
+    @content;
+  }
+}
+
+@mixin print {
+  @media print {
+    @content;
+  }
+}
+
+@mixin centered {
+  position  : absolute;
+  top       : 50%;
+  left      : 50%;
+  transform : translate(-50%, -50%);
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow : inset $top $left $blur $color;
+    -moz-box-shadow    : inset $top $left $blur $color;
+    box-shadow         : inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow : $top $left $blur $color;
+    -moz-box-shadow    : $top $left $blur $color;
+    box-shadow         : $top $left $blur $color;
+  }
+}
+
+@mixin rounded($radius: 0.5em) {
+  -webkit-border-radius : $radius;
+  -moz-border-radius    : $radius;
+  border-radius         : $radius;
+}

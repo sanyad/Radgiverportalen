@@ -1,0 +1,26 @@
+/*
+http://frontender.info/organizing-your-css-code-for-preprocessors/
+https://operatino.github.io/MCSS/modules/shorthand_dictionary.html
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  min-height: 100%;
+}
+/* ------------ BASE ------------ */
+// BASE
+@import "base/typography";
+@import "base/colors";
+
+// HELPERS
+@import "helpers/functions";
+@import "helpers/mixins";
+@import "helpers/animations";
+@import "helpers/icons-styles";
+
+// PAGES
+@import "pages/index";
