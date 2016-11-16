@@ -6,11 +6,13 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
 body {
   background: $wt;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
+
 .fb-container {
   margin-left: auto;
   margin-top: 80px;
@@ -26,6 +28,7 @@ body {
     margin-right: auto;
   }
 }
+
 .footer {
   margin-top: auto;
   flex: 0 0 auto;
@@ -33,11 +36,12 @@ body {
     margin-top: 40px;
   }
 }
+
 .social {
   list-style: none;
   font-size: 0;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   padding: 0;
   margin: 0;
@@ -50,12 +54,14 @@ body {
     display: block;
   }
 }
+
 .copy {
-  font:400 16px roboto;
+  font: 400 16px roboto;
   color: #4e4e5d;
   text-align: center;
   margin: 40px 0;
 }
+
 header {
   border-bottom: 2px solid #a1b6c7;
   height: auto;
@@ -74,7 +80,7 @@ header {
         .navbar-header {
           position: absolute;
           top: 8px;
-          >a {
+          > a {
             padding: 0;
             width: 194px;
             height: 64px;
@@ -112,7 +118,7 @@ header {
             height: 100%;
             padding: 0 30px;
             border-right: 1px solid $blue;
-            >a {
+            > a {
               margin: 0;
               padding: 0;
               text-transform: uppercase;
@@ -134,43 +140,47 @@ header {
     }
   }
 }
+
 .header_bg {
   min-height: 580px;
-  background: url("/assets/img/bg.png") no-repeat center;
+  background: url("/assets/img/bg.png") no-repeat center top;
   @include mediamin(1921px) {
     background-position: center 0;
   }
   @include mediamax(1199px) {
     background: url("/assets/img/bg.png") no-repeat -330px;
-    background-size:cover;
+    background-size: cover;
   }
   @include mediamax(767px) {
     height: auto;
     background: url("/assets/img/bg.png") no-repeat -1000px 0;
   }
+  >.container {
+    padding: 0;
+  }
   .header_bg_title {
-      margin: 55px auto 95px auto;
-      max-width: 770px;
-      min-height: 140px;
-      border: 1px solid rgba($grey,.2);
-      position: relative;
-      &:after {
-        position: absolute;
-        content: "";
-        background: rgba(209,214,224,.2);
-        height: 1px;
-        width: 120px;
-        transform: rotate(45deg);
-        bottom: 21px;
-        left: -40px;
-      }
-      >h1 {
-        color: $wt;
-        font-size: 50px;
-        font-weight: 300;
-        text-align: center;
-      }
+    margin: 55px auto 95px auto;
+    max-width: 770px;
+    min-height: 140px;
+    border: 1px solid rgba($grey, .2);
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      background: rgba(209, 214, 224, .2);
+      height: 1px;
+      width: 120px;
+      transform: rotate(45deg);
+      bottom: 21px;
+      left: -40px;
     }
+    > h1 {
+      color: $wt;
+      font-size: 50px;
+      font-weight: 300;
+      text-align: center;
+    }
+  }
   form {
     background: $bl;
     max-width: 770px;
@@ -180,7 +190,7 @@ header {
     padding: 20px 37px 0 37px;
     position: relative;
     label {
-      cursor:pointer;
+      cursor: pointer;
       margin-right: 45px;
       color: $wt;
       font-size: 15px;
@@ -188,23 +198,23 @@ header {
       margin-bottom: 0;
     }
     input[type="checkbox"] {
-      display:none;
+      display: none;
     }
     input[type="checkbox"] + label span {
-      display:inline-block;
-      width:20px;
-      height:20px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
       margin-right: 14px;
       vertical-align: sub;
-      background:url("/assets/img/nook.png") no-repeat;
-      cursor:pointer;
+      background: url("/assets/img/nook.png") no-repeat;
+      cursor: pointer;
     }
     input[type="checkbox"]:checked + label span {
-      background:url("/assets/img/ok.png") no-repeat;
+      background: url("/assets/img/ok.png") no-repeat;
     }
     .input-group {
       margin: 20px 0 16px;
-      box-shadow: 0 2px 0 0 rgba(52,69,138,.3);
+      box-shadow: 0 2px 0 0 rgba(52, 69, 138, .3);
       .form-control {
         height: 50px;
         font-size: 15px;
@@ -240,9 +250,80 @@ header {
       height: 38px;
     }
   }
-    h4 {
-      font-size: 16px;
-      color: $grey;
-      text-align: center;
+  h4 {
+    font-size: 16px;
+    color: $grey;
+    text-align: center;
+  }
+  .flex-container {
+    margin-top: 25px;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    .flex-item {
+      width: 216px;
+      margin-top: 10px;
+      position: relative;
+      a {
+        cursor: pointer;
+        &:focus, &.active {
+          .circle1 {
+            stroke-dashoffset: 0;
+            stroke: $bl;
+          }
+          .circle2 {
+            stroke-dashoffset: 0;
+          }
+        }
+      }
+      span {
+        font-size: 16px;
+        color: #fff;
+        text-transform: uppercase;
+        position: absolute;
+        left: 42px;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      &:hover, &:focus {
+        .circle1 {
+          stroke-dashoffset: 0;
+          stroke: $bl;
+        }
+        .circle2 {
+          stroke-dashoffset: 0;
+        }
+      }
     }
+  }
+  .svg {
+    text {
+      fill: $wt;
+    }
+    .circle1 {
+      stroke-dasharray: 81.681;
+      stroke-dashoffset: 16.681;
+      transition: all .3s;
+      stroke: $gr;
+      stroke-width: 3;
+      fill: transparent;
+      transform-origin: 50% 50%;
+      transform: rotate(37deg);
+    }
+    .circle2 {
+      stroke: $gr;
+      stroke-width: 1;
+      fill: transparent;
+      stroke-dasharray: 109.956;
+      stroke-dashoffset: 54.978;
+      transform-origin: 50% 50%;
+      transform: rotate(90deg);
+      transition: all .3s;
+    }
+  }
+}
+.unstyled {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
