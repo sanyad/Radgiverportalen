@@ -1,7 +1,51 @@
 extends ../_template
 
 block content
-    .header
+    header
+        .container.header_menu
+            nav.navbar.navbar-default
+                .container-fluid
+                    .col-md-8.top_line
+                        .navbar-header
+                            a.navbar-brand(href='#')
+                                img(src="assets/img/logo.png" alt="radgiver")
+                        .input-group
+                            input.form-control(type='text', placeholder='')
+                            span.input-group-btn
+                                button.btn.btn-default(type='button') Søk
+                    ul.nav.navbar-nav.navbar-right
+                        li
+                            a(href='#') Hjelp
+                        li
+                            a(href='#') Logg inn / Registrer
+    section.header_bg
+        .container
+            .header_bg_title
+                h1 Den beste måten å finne en rådgiver der du bor
+            h4 Se hvilke type spesialister du finner på ditt postnummer
+            form
+                input#fin(type='checkbox', name='fin' checked)
+                label(for='fin')
+                    span
+                    | Finansiere
+                input#for(type='checkbox', name='for')
+                label(for='for')
+                    span
+                    | Forsikring
+                input#adv(type='checkbox', name='adv')
+                label(for='adv')
+                    span
+                    | Advokat
+                .input-group
+                    input.form-control(type='text', placeholder='ditt postnummer')
+                    span.input-group-btn
+                        button
+                h5
+                    a(href="#!") Hva er mitt postnummer ?
+
+
+
+
     .container
         .fb-container
             .fb-page(data-href='https://www.facebook.com/www.spreknorge.no', data-tabs='timeline', data-small-header='false', data-adapt-container-width='true', data-hide-cover='false', data-show-facepile='true', data-width="370")
