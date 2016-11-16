@@ -77,11 +77,81 @@ block content
                         span Send forespørsel
 
 
-    .container
-        .fb-container
-            .fb-page(data-href='https://www.facebook.com/www.spreknorge.no', data-tabs='timeline', data-small-header='false', data-adapt-container-width='true', data-hide-cover='false', data-show-facepile='true', data-width="370")
-                blockquote.fb-xfbml-parse-ignore(cite='https://www.facebook.com/www.spreknorge.no')
-                    a(href='//www.facebook.com/www.spreknorge.no') Sprek Norge
+    aside
+        .container
+            .row
+                .col-sm-12
+                    h3 Hva tilbyr vi
+            .row
+                .col-sm-4.aside-cont
+                    svg.circleObj(height='50' width='50')
+                        use(xlink:href='assets/icons/sprite.svg#1')
+                    svg(height='110' width='110')
+                        circle.circle1(cx="54" cy="54" r="53")
+                        circle.circle2(cx="54" cy="54" r="53")
+                    h4 Presentasjon
+                    p
+                        | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        | Aenean commodo ligula eget dolor. Aenean massa.
+                        | Cum sociis natoque penatibus et magnis dis parturient montes.
+                .col-sm-4.aside-cont
+                    svg.circleObj(height='50' width='50')
+                        use(xlink:href='assets/icons/sprite.svg#2')
+                    svg(height='110' width='110')
+                        circle.circle1(cx="54" cy="54" r="53")
+                        circle.circle2(cx="54" cy="54" r="53")
+                    h4 Kundeomtaler
+                    p
+                        | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        | Aenean commodo ligula eget dolor.
+                .col-sm-4.aside-cont
+                    svg.circleObj(height='50' width='50')
+                        use(xlink:href='assets/icons/sprite.svg#3')
+                    svg(height='110' width='110')
+                        circle.circle1(cx="54" cy="54" r="53")
+                        circle.circle2(cx="54" cy="54" r="53")
+                    h4 bare reele vurderinger
+                    p
+                        | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        | Aenean commodo ligula eget dolor. Aenean massa.
+                .col-sm-4.aside-cont
+                    svg.circleObj(height='50' width='50')
+                        use(xlink:href='assets/icons/sprite.svg#4')
+                    svg(height='110' width='110')
+                        circle.circle1(cx="54" cy="54" r="53")
+                        circle.circle2(cx="54" cy="54" r="53")
+                    h4 sammenligning av fagfolk
+                    p
+                        | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        | Aenean commodo ligula eget dolor. Aenean massa.
+                        | Cum sociis natoque penatibus et magnis dis parturient montes.
+                .col-sm-4.aside-cont
+                    svg.circleObj(height='50' width='50')
+                        use(xlink:href='assets/icons/sprite.svg#5')
+                    svg(height='110' width='110')
+                        circle.circle1(cx="54" cy="54" r="53")
+                        circle.circle2(cx="54" cy="54" r="53")
+                    h4 referanser
+                    p
+                        | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        | Aenean commodo ligula eget dolor.
+                .col-sm-4.aside-cont
+                    svg.circleObj(height='50' width='50')
+                        use(xlink:href='assets/icons/sprite.svg#6')
+                    svg(height='110' width='110')
+                        circle.circle1(cx="54" cy="54" r="53")
+                        circle.circle2(cx="54" cy="54" r="53")
+                    h4 ta kontakt
+                    p
+                        | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        | Aenean commodo ligula eget dolor. Aenean massa.
+            .row.fb-container
+                .col-sm-7.paddl
+                .col-sm-5.paddr
+                    .fb
+                        .fb-page(data-href='https://www.facebook.com/facebook', data-tabs='timeline', data-width='410', data-height='430', data-small-header='false', data-adapt-container-width='true', data-hide-cover='false', data-show-facepile='true')
+                            blockquote.fb-xfbml-parse-ignore(cite='https://www.facebook.com/facebook')
+                                a(href='https://www.facebook.com/facebook') Facebook
     .footer
         +b.UL.social
             +e.list

@@ -11,21 +11,15 @@ body {
   background: $wt;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  color: #5d5d5d;
 }
 
 .fb-container {
-  margin-left: auto;
-  margin-top: 80px;
-  width: 370px;
   @include mediamin(1921px) {
-    margin-top: 180px;
   }
   @include mediamax(991px) {
-    width: 290px;
   }
   @include mediamax(767px) {
-    order: 2;
-    margin-right: auto;
   }
 }
 
@@ -76,7 +70,7 @@ header {
       margin: 0;
       .top_line {
         position: relative;
-        padding-top: 25px;
+        padding-top: 19px;
         .navbar-header {
           position: absolute;
           top: 8px;
@@ -284,6 +278,7 @@ header {
         left: 42px;
         top: 50%;
         transform: translate(0, -50%);
+        font-weight: 500;
       }
       &:hover, &:focus {
         .circle1 {
@@ -326,4 +321,90 @@ header {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+aside {
+  border-bottom: 2px solid #a1b6c7;
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $bl2;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      background: #d8e6ef;
+      height: 1px;
+      width: 400px;
+      left: 0;
+      top: 10px;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      background: #d8e6ef;
+      height: 1px;
+      width: 400px;
+      right: 0;
+      top: 10px;
+    }
+  }
+  .circleObj {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-187%);
+  }
+  .circle1 {
+    stroke-dasharray: 339.292;
+    stroke-dashoffset: 0;
+    transition: all .3s;
+    stroke: $gr;
+    stroke-width: 1;
+    fill: transparent;
+    //transform-origin: 50% 50%;
+    //transform: rotate(37deg);
+    z-index: 2;
+  }
+  .circle2 {
+    stroke-dasharray: 339.292;
+    stroke-dashoffset: 311;
+    transition: all .6s;
+    stroke: $bl;
+    stroke-width: 3;
+    fill: transparent;
+    transform-origin: 50% 50%;
+    transform: rotate(75deg);
+    z-index: 0;
+  }
+  .aside-cont {
+    height: 250px;
+    text-align: center;
+    &:hover, &:focus {
+      .circle2 {
+        stroke-dashoffset: 0;
+      }
+    }
+    >h4 {
+      font-size: 16px;
+      color: $bl2;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  }
+  .fb-container {
+    background: #f0f3f8;
+    .paddr {
+      padding-right: 0;
+    }
+    .paddl {
+      padding-left: 0;
+    }
+    .fb {
+      padding-top: 25px;
+      text-align: center;
+      background: #e2e9f1;
+    }
+  }
 }
