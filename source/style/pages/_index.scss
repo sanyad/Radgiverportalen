@@ -1,8 +1,5 @@
 html, body {
   height: 100%;
-  @include mediamax(1199px) {
-    //height: auto;
-  }
   margin: 0;
   padding: 0;
 }
@@ -14,54 +11,40 @@ body {
   color: #5d5d5d;
 }
 
-.fb-container {
-  @include mediamin(1921px) {
-  }
-  @include mediamax(991px) {
-  }
-  @include mediamax(767px) {
-  }
+footer {
+  padding: 10px 0;
 }
-
-.footer {
-  margin-top: auto;
-  flex: 0 0 auto;
-  @include mediamax(1199px) {
-    margin-top: 40px;
-  }
-}
-
 .social {
   list-style: none;
   font-size: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 0;
   margin: 0;
+  @include mediamax(991px) {
+    padding:0 15px;
+  }
   &__list {
-    margin: 0 20px;
-    width: 28px;
+    width: 37px;
     text-align: center;
   }
   &__link {
     display: block;
   }
 }
-
-.copy {
-  font: 400 16px roboto;
-  color: #4e4e5d;
-  text-align: center;
-  margin: 40px 0;
-}
-
 header {
   border-bottom: 2px solid #a1b6c7;
   height: auto;
   .header_menu {
     padding: 0;
     height: auto;
+    @include mediamax(991px) {
+      width: 100%;
+    }
+    @include mediamax(767px) {
+      padding: 0 15px;
+    }
     .navbar {
       border-radius: 0;
       border: none;
@@ -71,21 +54,86 @@ header {
       .top_line {
         position: relative;
         padding-top: 19px;
+        @include mediamax(991px) {
+          padding-top: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          width: 67%;
+        }
+        @include mediamax(767px) {
+          order: 2;
+          padding: 0;
+          width: 100%;
+          justify-content: space-between;
+        }
+        @include mediamax(580px) {
+          margin-bottom: 7px;
+          display: flex;
+          justify-content: flex-end;
+        }
+        @include mediamax(320px) {
+          display: inline-block;
+          margin-top: 17px;
+        }
         .navbar-header {
           position: absolute;
           top: 8px;
+          @include mediamax(991px) {
+            position: static;
+            float: none;
+            display: inline-block;
+          }
+          @include mediamax(767px) {
+            margin: -13px 0 6px;
+          }
+          @include mediamax(580px) {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            top: -87px;
+          }
+          @include mediamax(320px) {
+            top: -97px;
+          }
           > a {
             padding: 0;
             width: 194px;
             height: 64px;
           }
         }
+        .input-group {
+          @include mediamax(991px) {
+            width: 370px !important;
+          }
+        }
       }
       .container-fluid {
         padding: 0;
+        @include mediamax(991px) {
+          display: flex;
+          justify-content: space-around;
+        }
+        @include mediamax(767px) {
+          display: flex;
+          flex-direction: column;
+          padding-top: 5px;
+        }
+        @include mediamax(580px) {
+          padding-top: 90px;
+        }
+        @include mediamax(320px) {
+          text-align: center;
+        }
         .input-group {
           width: 50%;
           float: right;
+          @include mediamax(767px) {
+            float: right;
+          }
+          @include mediamax(320px) {
+            display: none;
+          }
           input, button {
             min-height: 42px;
           }
@@ -107,11 +155,24 @@ header {
         .navbar-right {
           height: auto;
           padding-right: 15px;
+          @include mediamax(991px) {
+            padding: 0;
+          }
+          @include mediamax(767px) {
+            display: flex;
+            justify-content: flex-end;
+            order: 1;
+            margin: 0;
+          }
           li {
             text-align: center;
             height: 100%;
             padding: 0 30px;
             border-right: 1px solid $blue;
+            @include mediamax(991px) {
+              border: none;
+              padding: 0 15px;
+            }
             > a {
               margin: 0;
               padding: 0;
@@ -120,6 +181,9 @@ header {
               font-weight: 700;
               font-size: 13px;
               line-height: 80px;
+              @include mediamax(767px) {
+                line-height: inherit;
+              }
               &:hover {
                 color: $bl;
                 text-decoration: underline;
@@ -127,6 +191,14 @@ header {
             }
             &:first-child {
               border-left: 1px solid $blue;
+              @include mediamax(991px) {
+                border: none;
+              }
+            }
+            &:last-child {
+              @include mediamax(767px) {
+                padding: 0;
+              }
             }
           }
         }
@@ -145,9 +217,20 @@ header {
     background: url("/assets/img/bg.png") no-repeat -330px;
     background-size: cover;
   }
+  @include mediamax(991px) {
+    background: url("/assets/img/bg.png") no-repeat -756px;
+    background-size: cover;
+  }
   @include mediamax(767px) {
     height: auto;
     background: url("/assets/img/bg.png") no-repeat -1000px 0;
+    padding:0 15px;
+  }
+  @include mediamax(580px) {
+    background-size: cover;
+  }
+  @include mediamax(320px) {
+    background-size: cover;
   }
   >.container {
     padding: 0;
@@ -158,6 +241,12 @@ header {
     min-height: 140px;
     border: 1px solid rgba($grey, .2);
     position: relative;
+    @include mediamax(767px) {
+      margin-bottom: 57px;
+    }
+    @include mediamax(320px) {
+      margin: 25px 0;
+    }
     &:after {
       position: absolute;
       content: "";
@@ -167,6 +256,11 @@ header {
       transform: rotate(45deg);
       bottom: 21px;
       left: -40px;
+      @include mediamax(320px) {
+        width: 100px;
+        bottom: 19px;
+        left: -29px;
+      }
     }
     > h1 {
       color: $wt;
@@ -183,6 +277,14 @@ header {
     border-radius: 5px;
     padding: 20px 37px 0 37px;
     position: relative;
+    @include mediamax(425px) {
+      padding: 5px;
+      text-align: center;
+    }
+    @include mediamax(320px) {
+      padding: 5px;
+      text-align: center;
+    }
     label {
       cursor: pointer;
       margin-right: 45px;
@@ -190,6 +292,9 @@ header {
       font-size: 15px;
       font-weight: 400;
       margin-bottom: 0;
+      @include mediamax(425px) {
+        margin-right: 25px;
+      }
     }
     input[type="checkbox"] {
       display: none;
@@ -209,10 +314,19 @@ header {
     .input-group {
       margin: 20px 0 16px;
       box-shadow: 0 2px 0 0 rgba(52, 69, 138, .3);
+      @include mediamax(320px) {
+        margin: 10px 0;
+      }
       .form-control {
         height: 50px;
         font-size: 15px;
         color: $blue;
+        @include mediamax(991px) {
+          padding: 5px 2px 5px 56px;
+        }
+        @include mediamax(767px) {
+          padding-left: 25px;
+        }
       }
       button {
         background: url("/assets/img/s2.png") $bl2 no-repeat;
@@ -254,6 +368,9 @@ header {
     display: flex;
     -webkit-flex-flow: row wrap;
     justify-content: space-around;
+    @include mediamax(320px) {
+      margin: 0;
+    }
     .flex-item {
       width: 216px;
       margin-top: 10px;
@@ -325,6 +442,16 @@ header {
 
 aside {
   border-bottom: 2px solid #a1b6c7;
+  padding-bottom: 65px;
+  @include mediamax(767px) {
+    padding: 0;
+  }
+  .aside-serv {
+    margin: 55px 0;
+    @include mediamax(767px) {
+      margin: 35px 0;
+    }
+  }
   h3 {
     text-align: center;
     text-transform: uppercase;
@@ -339,6 +466,24 @@ aside {
       width: 400px;
       left: 0;
       top: 10px;
+      @include mediamax(1199px) {
+        width: 37%;
+      }
+      @include mediamax(1024px) {
+        width: 340px;
+      }
+      @include mediamax(991px) {
+        width: 240px;
+      }
+      @include mediamax(580px) {
+        width: 30%
+      }
+      @include mediamax(425px) {
+        width: 25%;
+      }
+      @include mediamax(320px) {
+        width: 15%;
+      }
     }
     &:before {
       position: absolute;
@@ -348,6 +493,24 @@ aside {
       width: 400px;
       right: 0;
       top: 10px;
+      @include mediamax(1199px) {
+        width: 37%;
+      }
+      @include mediamax(1024px) {
+        width: 340px;
+      }
+      @include mediamax(991px) {
+        width: 240px;
+      }
+      @include mediamax(580px) {
+        width: 30%
+      }
+      @include mediamax(425px) {
+        width: 25%;
+      }
+      @include mediamax(320px) {
+        width: 15%;
+      }
     }
   }
   .circleObj {
@@ -355,6 +518,9 @@ aside {
     left: 50%;
     top: 50%;
     transform: translate(-50%,-187%);
+    @include mediamax(767px) {
+      transform: translate(-50%,-157%);
+    }
   }
   .circle1 {
     stroke-dasharray: 339.292;
@@ -379,8 +545,19 @@ aside {
     z-index: 0;
   }
   .aside-cont {
+    position: relative;
     height: 250px;
     text-align: center;
+    @include mediamax(991px) {
+      margin-bottom: 50px;
+    }
+    @include mediamax(767px) {
+      margin: 0;
+      height: 210px;
+    }
+    @include mediamax(320px) {
+      margin-bottom: 34px;
+    }
     &:hover, &:focus {
       .circle2 {
         stroke-dashoffset: 0;
@@ -392,19 +569,286 @@ aside {
       text-transform: uppercase;
       font-weight: 500;
     }
+    &:after {
+      position: absolute;
+      content: "";
+      background-image: url(/assets/img/arr.png);
+      right: -8px;
+      top: 42px;
+      z-index: 10;
+      width: 15px;
+      height: 25px;
+      @include mediamax(767px) {
+        display: none;
+      }
+    }
+  }
+  .arr {
+    &:after {
+      display: none;
+    }
   }
   .fb-container {
     background: #f0f3f8;
+    height: 597px;
+    @include mediamax(1000px) {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     .paddr {
       padding-right: 0;
+      height: 100%;
+      background: #e2e9f1;
+      @include mediamax(991px) {
+        height: 100%;
+        width: 100%;
+        padding: 0 15px 20px;
+      }
+      h4 {
+        font-size: 16px;
+        color: $bl2;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-align: center;
+        margin: 30px 0 18px;
+      }
     }
     .paddl {
-      padding-left: 0;
+      padding-left: 25px;
+      @include mediamax(991px) {
+        padding: 0;
+        width: 100%;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        padding: 12px 0;
+        li {
+          margin: 12px 0;
+          width: 100%;
+          height: 167px;
+          background: $wt;
+          border-radius: 5px;
+          @include mediamax(991px) {
+            margin: 12px auto;
+            width: 96%;
+          }
+          @include mediamax(425px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+          }
+          @include mediamax(320px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+          }
+          a {
+            color: $wt;
+            .fb-img {
+              float: left;
+              background: $fb;
+              width: 176px;
+              height: 100%;
+              border-radius: 5px;
+              border-top-right-radius: 0;
+              border-bottom-right-radius: 0;
+              margin-right: 18px;
+              position: relative;
+              @include mediamax(320px) {
+                margin: 0;
+                border-radius: 0;
+              }
+              &__face {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                top: 14px;
+              }
+              &__name {
+                text-decoration: underline;
+                margin-top: 126px;
+                text-align: center;
+              }
+            }
+          }
+          .descr {
+            .fb-title__header {
+              display: flex;
+              justify-content: space-between;
+              padding: 14px 12px 14px 0;
+              @include mediamax(320px) {
+                padding: 14px 0;
+              }
+              .name2 {
+                span {
+                  display: block;
+                  font-size: 16px;
+                  color: $bl2;
+                  font-weight: 500;
+                }
+              }
+            }
+          }
+        }
+      }
     }
     .fb {
       padding-top: 25px;
       text-align: center;
-      background: #e2e9f1;
+      .input-group {
+        width: 410px;
+        margin: auto;
+        @include mediamax(1199px) {
+          width: 100%;
+        }
+        @include mediamax(1024px) {
+          width: 100%;
+        }
+        input, button {
+          min-height: 50px;
+        }
+        input {
+          z-index: 5;
+          color: #a1b6c7;
+          padding: 5px 2px 5px 40px;
+          background: url("/assets/img/8.png") no-repeat scroll 5% 50% #f1f5f7;
+          @include mediamax(767px) {
+            padding: 5px 2px 5px 46px;
+            background: url(/assets/img/8.png) no-repeat 3% 50% #f1f5f7;
+          }
+        }
+        span {
+          width: 94px;
+          button {
+            text-transform: uppercase;
+            color: $wt;
+            font-weight: 700;
+            font-size: 13px;
+            background: $bl2;
+            border: none;
+            width: 100%;
+            border-radius: 4px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+        }
+      }
     }
   }
 }
+#hurtiglenker {
+  border: none;
+  background-color: #f0f3f8;
+  height: 380px;
+  @include mediamax(991px) {
+    height: auto;
+    padding:0  ;
+  }
+  h4 {
+    font-size: 16px;
+    color: $bl2;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: left;
+    margin: 30px 0 18px;
+    @include mediamax(991px) {
+      padding: 0 15px;
+    }
+  }
+  ul {
+    li {
+      margin: 7px 0;
+      a {
+        color: $services-color;
+        text-decoration: underline;
+      }
+    }
+  }
+  p {
+    margin: 40px 0 20px;
+  }
+  .list-1 {
+    @include mediamax(991px) {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include mediamax(767px) {
+      display: block;
+    }
+  }
+  .col-sm-5 {
+    @include mediamax(991px) {
+      width: 50%;
+    }
+  }
+}
+.no-padd-left {
+  padding-left: 0;
+  @include mediamax(991px) {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+.no-padd-right {
+  padding-right: 0;
+}
+.contact-ref {
+  width: 123px;
+  height: 37px;
+  background: $bl;
+  color: $wt;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  padding: 11px 18px;
+  font-weight: 700;
+  font-size: 13px;
+  margin-left: 18px;
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+//-------------------------------------------------------------------STARS------------------
+fieldset, label { margin: 0; padding: 0; }
+.rating {
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+  margin: 0 4px;
+  font-size: 1em;
+  font-family: "FontAwesome";
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: #c8d0d5;
+  float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: $bl;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: $bl;  }
+//----------------------------------------------------------------------STARS END-----------------------
