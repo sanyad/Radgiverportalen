@@ -141,7 +141,7 @@ header {
             z-index: 5;
             color: #a1b6c7;
             padding: 5px 2px 5px 40px;
-            background: url("/assets/img/search.png") no-repeat scroll 5% 50% #f1f5f7;
+            background: url("../img/search.png") no-repeat scroll 5% 50% #f1f5f7;
           }
           button {
             text-transform: uppercase;
@@ -209,21 +209,18 @@ header {
 
 .header_bg {
   min-height: 580px;
-  background: url("/assets/img/bg.png") no-repeat center top;
-  @include mediamin(1921px) {
-    background-position: center 0;
-  }
+  background: url("../img/bg.png") no-repeat center top;
   @include mediamax(1199px) {
-    background: url("/assets/img/bg.png") no-repeat -330px;
+    background: url("../img/bg.png") no-repeat -330px;
     background-size: cover;
   }
   @include mediamax(991px) {
-    background: url("/assets/img/bg.png") no-repeat -756px;
+    background: url("../img/bg.png") no-repeat -756px;
     background-size: cover;
   }
   @include mediamax(767px) {
     height: auto;
-    background: url("/assets/img/bg.png") no-repeat -1000px 0;
+    background: url("../img/bg.png") no-repeat -1000px 0;
     padding:0 15px;
   }
   @include mediamax(580px) {
@@ -295,6 +292,13 @@ header {
       @include mediamax(425px) {
         margin-right: 25px;
       }
+      @include mediamax(375px) {
+        margin-right: 5px;
+      }
+      @include mediamax(320px) {
+        margin-right: 5px;
+        width: 70px;
+      }
     }
     input[type="checkbox"] {
       display: none;
@@ -305,11 +309,11 @@ header {
       height: 20px;
       margin-right: 14px;
       vertical-align: sub;
-      background: url("/assets/img/nook.png") no-repeat;
+      background: url("../img/nook.png") no-repeat;
       cursor: pointer;
     }
     input[type="checkbox"]:checked + label span {
-      background: url("/assets/img/ok.png") no-repeat;
+      background: url("../img/ok.png") no-repeat;
     }
     .input-group {
       margin: 20px 0 16px;
@@ -329,7 +333,7 @@ header {
         }
       }
       button {
-        background: url("/assets/img/s2.png") $bl2 no-repeat;
+        background: url("../img/s2.png") $bl2 no-repeat;
         width: 59px;
         height: 50px;
         border: none;
@@ -351,7 +355,7 @@ header {
     &:before {
       position: absolute;
       content: "";
-      background: url(/assets/img/borderForm.png) no-repeat;
+      background: url("../img/borderForm.png") no-repeat;
       left: -5px;
       top: -4px;
       width: 79px;
@@ -572,7 +576,7 @@ aside {
     &:after {
       position: absolute;
       content: "";
-      background-image: url(/assets/img/arr.png);
+      background-image: url("../img/arr.png");
       right: -8px;
       top: 42px;
       z-index: 10;
@@ -588,17 +592,16 @@ aside {
       display: none;
     }
   }
-  .fb-container {
+  .fb-section {
     background: #f0f3f8;
     height: 597px;
-    @include mediamax(1000px) {
+    @include mediamax(991px) {
       height: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
     .paddr {
-      padding-right: 0;
       height: 100%;
       background: #e2e9f1;
       @include mediamax(991px) {
@@ -698,9 +701,13 @@ aside {
         }
       }
     }
-    .fb {
+    .fb-container {
       padding-top: 25px;
       text-align: center;
+      height: 460px;
+      overflow: hidden;
+    }
+    .mail-form {
       .input-group {
         width: 410px;
         margin: auto;
@@ -717,10 +724,13 @@ aside {
           z-index: 5;
           color: #a1b6c7;
           padding: 5px 2px 5px 40px;
-          background: url("/assets/img/8.png") no-repeat scroll 5% 50% #f1f5f7;
+          background: url("../img/8.png") no-repeat scroll 5% 50% #f1f5f7;
+          @include mediamax(991px) {
+            background: url("../img/8.png") no-repeat scroll 3% 50% #f1f5f7;
+          }
           @include mediamax(767px) {
             padding: 5px 2px 5px 46px;
-            background: url(/assets/img/8.png) no-repeat 3% 50% #f1f5f7;
+            background: url("../img/8.png") no-repeat 3% 50% #f1f5f7;
           }
         }
         span {
