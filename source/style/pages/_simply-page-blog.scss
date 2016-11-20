@@ -1,0 +1,160 @@
+.first-page-title {
+  height: 128px;
+  @include mediamax(767px) {
+    min-height: 128px;
+  }
+  @include mediamax(655px) {
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .title-blog-page {
+    text-align: left;
+    text-transform: inherit;
+    font-weight: 500;
+    color: $fb;
+    margin: 45px 0 20px;
+    &:after, &:before {
+      display: none;
+    }
+  }
+  span {
+    color: #7d8f9e;
+    font-size: 13px;
+  }
+  .no-padd {
+    padding: 0 15px;
+  }
+}
+.first-page-body {
+  background-color: #f3f8fe;
+  padding-top: 38px;
+  .blog-img-cont {
+    float: right;
+    margin: 0 0 38px 36px;
+    @include mediamax(1199px) {
+      margin: 0;
+    }
+    @include mediamax(991px) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+  .blog-descr {
+    @include mediamax(991px) {
+      clear: both;
+    }
+    p {
+      line-height: 1.8;
+    }
+    .blog-descr-title {
+      margin: 17px 0 15px;
+      color: $fb;
+      font-weight: 700;
+    }
+    ul {
+      line-height: 1.8;
+    }
+  }
+}
+.bg-fon {
+  background-color: $wt;
+  padding: 20px 20px 0 18px;
+}
+img {
+  max-width: 100%;
+}
+//---------------------------TABLE-------------------------
+table {
+  width: 100%;
+  margin-top: 20px;
+  thead {
+    color: $fb;
+    font-size: 14px;
+    font-weight: 500;
+    tr {
+      line-height: 40px;
+      th {
+        padding-left: 13px;
+        @include mediamax(991px) {
+          padding-left: 4px;
+        }
+      }
+    }
+  }
+  tbody {
+    font-size: 13px;
+    border: 1px solid #d8e6ef;
+    border-top: 2px solid #d8e6ef;
+    tr {
+      @include mediamax(320px) {
+        line-height: 2;
+      }
+      line-height: 40px;
+      td {
+        padding-left: 13px;
+        @include mediamax(991px) {
+          padding-left: 4px;
+        }
+      }
+      &:nth-child(even) {
+        background: #f3f6f9;
+      }
+      .bd-right {
+        border-right: 1px solid #d8e6ef;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+
+  /* Force table to not be like tables anymore */
+  #no-more-tables table,
+  #no-more-tables thead,
+  #no-more-tables tbody,
+  #no-more-tables th,
+  #no-more-tables td,
+  #no-more-tables tr {
+    display: block;
+  }
+  #no-more-tables tbody {
+    border-top: 1px solid #d8e6ef;
+  }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  #no-more-tables thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  #no-more-tables tr { border: 1px solid #ccc; }
+
+  #no-more-tables td {
+    /* Behave  like a "row" */
+    border: none;
+    position: relative;
+    padding-left: 40%;
+    white-space: normal;
+    text-align:left;
+  }
+
+  #no-more-tables td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align:left;
+    font-weight: 500;
+    color: #51689a;
+    font-size: 14px;
+  }
+
+  /*
+  Label the data
+  */
+  #no-more-tables td:before { content: attr(data-title); }
+}

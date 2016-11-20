@@ -1,0 +1,88 @@
+extends ../_template
+
+block content
+    include ../components/_header
+    section#first-page
+        .first-page-title
+            .container.no-padd
+                .row
+                    .col-sm-12
+                        h3.title-blog-page Artikkeltittel som er ganske lang, og så videre og så videre
+                        span today at 16:45
+        .first-page-body
+            .container.bg-fon
+                .row
+                    .col-md-12
+                        .blog-img-cont
+                            img(src="../assets/img/ib1.png" alt="Artikkeltittel")
+                        .blog-descr
+                            p.
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                                Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+                            p.
+                                I n enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                                Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+                                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                                Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+                                Quisque rutrum.
+                            p.
+                                Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+                                Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
+                            p.
+                                adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
+                                Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
+                                Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
+                                Donec sodales sagittis magna
+                            h4.blog-descr-title
+                                | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            p.
+                                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                                Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+                                Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+                                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+                                Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+                            p.
+                                Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+                                Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
+                                Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.
+                            h4.blog-descr-title
+                                | Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante:
+                            ul.unstyled
+                                li • Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.
+                                li • Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.
+                                li • Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            table#no-more-tables
+                                thead
+                                    tr
+                                        th.numeric
+                                            | Lorem ipsum
+                                        th.numeric
+                                            | Ipsum 1
+                                        th.numeric
+                                            | Ipsum 2
+                                tbody
+                                    tr
+                                        td.numeric.bd-right(data-title='Lorem ipsum')
+                                            | Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu
+                                        td.numeric.bd-right(data-title='Ipsum 1')
+                                            | Donec pede justo, fringilla vel
+                                        td.numeric(data-title='Ipsum 2')
+                                            | Donec pede justo, fringilla vel
+                                    tr
+                                        td.numeric.bd-right(data-title='Lorem ipsum')
+                                            | In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo
+                                        td.numeric.bd-right(data-title='Ipsum 1')
+                                            | In enim justo, rhoncus ut
+                                        td.numeric(data-title='Ipsum 2')
+                                            | In enim justo, rhoncus ut
+                                    tr
+                                        td.numeric.bd-right(data-title='Lorem ipsum')
+                                            | In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo
+                                        td.numeric.bd-right(data-title='Ipsum 1')
+                                            | In enim justo
+                                        td.numeric(data-title='Ipsum 2')
+                                            | In enim justo
+    include ../components/_footer
