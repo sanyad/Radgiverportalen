@@ -104,7 +104,7 @@ header {
         }
         .input-group {
           @include mediamax(991px) {
-            width: 370px !important;
+            width: 347px !important;
           }
         }
       }
@@ -445,7 +445,6 @@ header {
 }
 
 aside {
-  border-bottom: 2px solid #a1b6c7;
   padding-bottom: 65px;
   @include mediamax(767px) {
     padding: 0;
@@ -469,7 +468,7 @@ aside {
       height: 1px;
       width: 400px;
       left: 0;
-      top: 10px;
+      top: 11px;
       @include mediamax(1199px) {
         width: 37%;
       }
@@ -496,7 +495,7 @@ aside {
       height: 1px;
       width: 400px;
       right: 0;
-      top: 10px;
+      top: 11px;
       @include mediamax(1199px) {
         width: 37%;
       }
@@ -756,6 +755,7 @@ aside {
   border: none;
   background-color: #f0f3f8;
   height: 380px;
+  border-top: 2px solid #a1b6c7;
   @include mediamax(991px) {
     height: auto;
     padding:0  ;

@@ -1,23 +1,7 @@
 extends ../_template
 
 block content
-    header
-        .container.header_menu
-            nav.navbar.navbar-default
-                .container-fluid
-                    .col-md-8.top_line
-                        .navbar-header
-                            a.navbar-brand(href='#')
-                                img(src="assets/img/logo.png" alt="radgiver")
-                        .input-group
-                            input.form-control(type='text', placeholder='')
-                            span.input-group-btn
-                                button.btn.btn-default(type='button') Søk
-                    ul.nav.navbar-nav.navbar-right
-                        li
-                            a(href='#') Hjelp
-                        li
-                            a(href='#') Logg inn / Registrer
+    include ../components/_header
     section.header_bg
         .container
             .header_bg_title
@@ -44,7 +28,7 @@ block content
                     a(href="#!") Hva er mitt postnummer ?
             ul.unstyled.flex-container
                 li.flex-item
-                    a(href="#!")
+                    a(href="blog.html")
                         svg.svg(height='37' width='37')
                             g
                                 circle.circle1(cx="18.5" cy="18.5" r="13")
@@ -289,82 +273,7 @@ block content
                                 input.form-control(type='text', placeholder='din epost')
                                 span.input-group-btn
                                     button Abonnere
-    aside#hurtiglenker
-        .container
-            .row
-                h4 Hurtiglenker
-            .row
-                .col-sm-2.no-padd-left
-                    ul.unstyled.list-1
-                        li
-                            a(href="#!")
-                                | Logg in  / Register
-                        li
-                            a(href="#!")
-                                | Spørsmål og svar
-                        li
-                            a(href="#!")
-                                | Stillinger
-                        li
-                            a(href="#!")
-                                | Kontakt
-                        li
-                            a(href="#!")
-                                | Om oss
-                .col-sm-5
-                    ul.unstyled.list-2
-                        li
-                            a(href="#!")
-                                | Lorem ipsum dolor sit amet
-                        li
-                            a(href="#!")
-                                | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                | Aenean commodo ligula eget dolor.
-                        li
-                            a(href="#!")
-                                | Donec quam felis, ultricies nec, pellentesque eu
-                        li
-                            a(href="#!")
-                                | Lorem ipsum
-                        li
-                            a(href="#!")
-                                | Lorem ipsum dolor sit amet
-                .col-sm-5
-                    ul.unstyled.list-3
-                        li
-                            a(href="#!")
-                                | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                | Aenean commodo ligula eget dolor.
-                        li
-                            a(href="#!")
-                                | Lorem ipsum dolor sit amet
-                        li
-                            a(href="#!")
-                                | Donec quam felis, ultricies nec, pellentesque eu
-                        li
-                            a(href="#!")
-                                | Lorem ipsum dolor sit amet
-                        li
-                            a(href="#!")
-                                | Donec quam felis, ultricies nec, pellentesque eu
-
-            .row
-                .col-sm-12.no-padd-left
-                    p
-                        | Rådgiverportalen.no er en uavhengig guide til finans, forsikring og advokatransjen © 2016 Vilkår Personvern
-                        br
-                        | Forbehold om feil og mangler. Bruk av automatiserte tjenester eller annen systematisk innhenting av informasjon er ikke tillatt uten eksplisitt samtykke.
-                        div
-                            | En del av Team Fruppen AS
-    footer
-        .container.no-padd-left.no-padd-right
-            +b.UL.social
-                +e.list
-                    +e.A(href="//www.facebook.com/www.spreknorge.no" target="_blank").link
-                        img(src="assets/img/f.png" alt="facebook")
-                +e.logo-footer
-                    +e.a(href="#")
-                        img(src="assets/img/logo.png" alt="radgiver")
+    include ../components/_footer
     #fb-root
     script.
         (function (d, s, id) {
